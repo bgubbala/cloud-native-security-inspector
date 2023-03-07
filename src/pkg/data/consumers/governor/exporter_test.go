@@ -20,6 +20,7 @@ var (
 	name              = "name"
 	image             = "image"
 	imageID           = "imageId"
+	id                = "6e476de6-168b-4d75-9b9d-a8802333969a"
 	replicaCount      = 2
 	testHeader        = "testHeader"
 	testHeaderValue   = "testHeaderValue"
@@ -59,6 +60,7 @@ func TestSendReportToGovernor(t *testing.T) {
 					WorkloadAssessments: []*api.WorkloadAssessment{{Workload: api.Workload{Replicas: int32(replicaCount),
 						Pods: []*api.Pod{{Containers: []*api.Container{{
 							Name:    name,
+							ID:      id,
 							Image:   image,
 							ImageID: imageID,
 						}}}}}}}}}}},
